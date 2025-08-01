@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> DubEvalNet: Bridging the Gap Between Objective Metrics and Human Judgment in Dubbing Quality Evaluation</title>
+    <meta name="description" content="We've presented Clarity, a minimalist and elegant website template for AI research.">
+    <meta name="referrer" content="no-referrer-when-downgrade">
+    <meta name="robots" content="all">
+    <meta content="en_EN" property="og:locale">
+    <meta content="website" property="og:type">
+    <meta content="https://shikun.io/projects/clarity" property="og:url">
+    <meta content="Clarity" property="og:title">
+    <meta content="Website Template for AI Research" property="og:description">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@your_twitter_id">
+    <meta name="twitter:description" content="Clarity: A Minimalist Website Template for AI Research">
+    <meta name="twitter:image:src" content="assets/figures/clarity.png">
+    
+    <link rel="stylesheet" type="text/css" media="all" href="assets/stylesheets/main_free.css" />
+    <link rel="stylesheet" type="text/css" media="all" href="clarity/clarity.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/foundation.min.css">
+    <link href="assets/fontawesome-free-6.6.0-web/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/img-comparison-slider@8/dist/styles.css"/>
+    <script defer src="https://cdn.jsdelivr.net/npm/img-comparison-slider@8/dist/index.js"></script>
+    <script src="assets/scripts/navbar.js"></script>  <!-- Comment to remove table of content. -->
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+            "HTML-CSS": {
+              scale: 95,
+              fonts: ["Gyre-Pagella"],
+              imageFont: null,
+              undefinedFamily: "'Arial Unicode MS', cmbright"
+            },
+            tex2jax: {
+                inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+                processEscapes: true
+              }
+          });
+    </script>
+    <script type="text/javascript"
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <!-- Title Page -->
+    <!-- Dark Theme Example: Change the background colour dark and change the following div "blog-title" into "blog-title white". -->
+    <div class="container blog" id="first-content" style="background-color: #E0E4E6;">
+        <!-- If you don't have a project cover: Change "blog-title" into "blog-title no-cover"  -->
+        <div class="blog-title no-cover">
+            <div class="blog-intro">
+                <div>
+                    <h1 class="title"> DubEvalNet: Bridging the Gap Between Objective Metrics and Human Judgment in Dubbing Quality Evaluation</h1>
+                    <p class="author">
+                        Anonymous Submission
+                    </p>
+                   
+                    <p class="abstract", style="text-align: justify">
+Evaluating the quality of AI-generated dubbed videos is a complex perceptual problem involving multiple interdependent factors such as audio-visual synchronization, speaker-character consistency, intelligibility, emotional alignment, and semantic coherence. Existing objective metrics target these dimensions in isolation and fail to produce an overall quality score that reflects human perception. In this work, we present DubEvalNet, a perceptual scoring framework that predicts holistic dubbing quality using multimodal representations and a combination of weak and subjective supervision. To support this effort, we construct a large-scale evaluation corpus by translating publicly available, dialogue-rich video datasets between Hindi and English using state-of-the-art NMT and TTS systems. Human subjects rate the dubbed outputs across several perceptual dimensions, and we generate weak supervision by fusing multiple objective metrics through weighted aggregation. Our model integrates features from large-scale pretrained audio and visual encoders using a multimodal fusion module and downstream regression head. Fine-tuning on a subset of subjective scores leads to a strong correlation (70\%+) with human evaluations. This is the first unified, scalable, and human-aligned approach for perceptual evaluation of AI dubbing quality, addressing a critical gap in multimodal content assessment. We also discuss the remaining challenges in perceptual modeling, annotation ambiguity, and cross-domain generalization to guide future research in this space.        </p>                    </p>
+                    <!-- Using FontAwesome Pro -->
+                    <!-- <div class="info">
+                        <div>
+                            <a href="https://arxiv.org" class="button icon" style="background-color: rgba(255, 255, 255, 0.3)"> Paper <i class="far fa-book-open"></i></a> &nbsp;&nbsp; 
+                            <a href="https://github.com" class="button icon" style="background-color: rgba(255, 255, 255, 0.3)">Code <i class="far fa-code"></i></a>  &nbsp;&nbsp; 
+                            <a href="https://www.microsoft.com/en-gb/microsoft-365/powerpoint" class="button icon" style="background-color: rgba(255, 255, 255, 0.3);">Slides <i class="far fa-presentation"></i></a>  &nbsp;&nbsp; 
+                            <a href="https://huggingface.co/spaces" class="button icon" style="background-color: rgba(255, 255, 255, 0.3)">Demo <i class="fa-light fa-face-smiling-hands"></i></a>
+                        </div>
+                    </div> -->
+
+                    <!-- Using FontAwesome Free -->
+                    <div class="info">
+                        <div>
+                            <a  class="button icon" style="background-color: rgba(255, 255, 255, 0.2)"> Paper <i class="fa-solid fa-book-open"></i></a> &nbsp;&nbsp; 
+                            <a  class="button icon" style="background-color: rgba(255, 255, 255, 0.2)">Code <i class="fa-solid fa-laptop-code"></i></a> 
+                        </div>
+                    </div>
+                </div>
+               
+                <div class="info">
+                    <p>Submitted at AAAI 2026</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+<figure style="text-align: center; margin: 40px auto;">
+  <img src="./data_pipeline.drawio.png" alt="Automatic Translation and Dubbing Pipeline" style="max-width: 100%; height: auto;">
+  <figcaption style="margin-top: 10px; font-size: 14px; color: #555;">
+    Figure 1: A schematic overview of the proposed database development pipeline.
+  </figcaption>
+</figure>
+
+  <div class="container blog main first full-width" id="blog-main">
+
+        <h1 >
+            Demo Samples
+        </h1>
+        <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 30px;
+        }
+        .input-text {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+            padding: 10px;
+            background-color: #f9f9f9;
+            border-left: 5px solid #4CAF50;
+        }
+        .section-description {
+            font-style: italic;
+            margin-bottom: 30px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: center;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 10px;
+        }
+        video, audio {
+            width: 100%;
+            max-width: 350px;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        .model-name {
+            font-weight: bold;
+            background-color: #fafafa;
+        }
+    </style>
+</head>
+<body>
+<h4> M2H2 Dataset Samples
+<table>
+  <tr>
+    <th>Input Hindi Video</th>
+    <th>Dubbed English Video</th>
+  </tr>
+  <!-- Video Row 1 -->
+  <tr>
+    <td>
+      <video controls>
+        <source src="Demo_Samples/Input1.mp4" type="video/mp4">
+      </video>
+    </td>
+    <td>
+      <video controls>
+        <source src="Demo_Samples/Output1.mp4" type="video/mp4">
+      </video>
+    </td>
+  </tr>
+
+  <tr>
+    <td>
+      <video controls>
+        <source src="Demo_Samples/Input2.mp4" type="video/mp4">
+      </video>
+    </td>
+    <td>
+      <video controls>
+        <source src="Demo_Samples/Output2.mp4" type="video/mp4">
+      </video>
+    </td>
+  </tr>
+
+  <tr>
+    <td>
+      <video controls>
+        <source src="Demo_Samples/Input3.mp4" type="video/mp4">
+      </video>
+    </td>
+    <td>
+      <video controls>
+        <source src="Demo_Samples/Output3.mp4" type="video/mp4">
+      </video>
+    </td>
+  </tr>
+
+  <tr>
+    <td>
+      <video controls>
+        <source src="Demo_Samples/Input4.mp4" type="video/mp4">
+      </video>
+    </td>
+    <td>
+      <video controls>
+        <source src="Demo_Samples/Output4.mp4" type="video/mp4">
+      </video>
+    </td>
+  </tr>
+
+  <tr>
+    <td>
+      <video controls>
+        <source src="Demo_Samples/Input5.mp4" type="video/mp4">
+      </video>
+    </td>
+    <td>
+      <video controls>
+        <source src="Demo_Samples/Output5.mp4" type="video/mp4">
+      </video>
+    </td>
+  </tr>
+</div>
+</table>
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+      <p>This website is built on the <a href="https://shikun.io/projects/clarity">Clarity Template</a>, designed by <a href="https://shikun.io/">Shikun Liu</a>.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <script src="clarity/clarity.js"></script>
+  <script src="assets/scripts/main.js"></script>
+</body>
+</html>
