@@ -58,6 +58,9 @@
                     <p class="author">
                         Ashwini Dasare, Nirmesh Shah, Ashishkumar Gudmalwar, Pankaj Wasnik
                     </p>
+                    <p class="address">
+                        Sony Research India
+                    </p>
                    
                     <p class="abstract", style="text-align: justify">
                         Evaluating AI-dubbed video quality is inherently multi-dimensional, shaped by synchronization, intelligibility, speaker consistency, emotional alignment, and semantic context. Human Mean Opinion Scores (MOS) remain the gold standard but are costly and impractical at scale. We present a hierarchical multimodal architecture for perceptually meaningful dubbing evaluation, integrating complementary cues from audio, video, and text. The model captures fine-grained features such as speaker identity, prosody, and content from audio, facial expressions and scene-level cues from video and semantic context from text, which are progressively fused through intra and inter-modal layers. Lightweight LoRA adapters enable parameter-efficient fine-tuning across modalities. To overcome limited subjective labels, we derive proxy MOS by aggregating objective metrics with weights optimized via active learning. We trained propose architecture using 12k Hindi-English bidirectional dubbed clips followed by finetuning with human MOS. Our approach achieves strong perceptual alignment (PCC $>$ 0.75), providing a scalable solution for automated dubbing evaluation.
