@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> DubEvalNet: Bridging the Gap Between Objective Metrics and Human Judgment in Dubbing Quality Evaluation</title>
+    <title> Can Hierarchical Cross-Modal Fusion Predict Human Perception of Dubbed Videos?</title>
     <meta name="description" content="We've presented Clarity, a minimalist and elegant website template for AI research.">
     <meta name="referrer" content="no-referrer-when-downgrade">
     <meta name="robots" content="all">
@@ -60,7 +60,7 @@
                     </p>
                    
                     <p class="abstract", style="text-align: justify">
-Quality assessment of AI-generated dubbed content is a complex and challenging perceptual task that requires evaluating various interconnected factors, including audio-visual synchronization, consistency between speaker and character, intelligibility, emotional congruence, and semantic coherence. Current objective metrics focus on these aspects individually and do not provide an overall quality score that aligns with human perception. In this paper, we introduce DubEvalNet, a multimodal scoring framework designed to predict overall dubbing quality. To this extent, we construct a large-scale Hindi-English dubbing corpus by translating dialogue-rich video datasets using state-of-the-art Neural Machine Translation (NMT) and Text to Speech Synthesis (TTS) systems. Human raters evaluate dubbed content across key perceptual dimensions, while weak labels are derived by aggregating multiple objective metrics through weighted fusion. Our model employs a multimodal fusion architecture with a regression head trained to align with subjective scores. Fine-tuning on a small set of human annotations yields a strong correlation (75\%+) with human evaluations. DubEvalNet is the first unified, scalable, and human-aligned framework for automatic perceptual evaluation of AI dubbing, addressing a key gap in multimodal content assessment. This paper also highlights remaining challenges in modeling perceptual quality, handling annotation ambiguity, and enabling cross-domain generalization.                    <!-- Using FontAwesome Pro -->
+                        Evaluating AI-dubbed video quality is inherently multi-dimensional, shaped by synchronization, intelligibility, speaker consistency, emotional alignment, and semantic context. Human Mean Opinion Scores (MOS) remain the gold standard but are costly and impractical at scale. We present a hierarchical multimodal architecture for perceptually meaningful dubbing evaluation, integrating complementary cues from audio, video, and text. The model captures fine-grained features such as speaker identity, prosody, and content from audio, facial expressions and scene-level cues from video and semantic context from text, which are progressively fused through intra and inter-modal layers. Lightweight LoRA adapters enable parameter-efficient fine-tuning across modalities. To overcome limited subjective labels, we derive proxy MOS by aggregating objective metrics with weights optimized via active learning. We trained propose architecture using 12k Hindi-English bidirectional dubbed clips followed by finetuning with human MOS. Our approach achieves strong perceptual alignment (PCC $>$ 0.75), providing a scalable solution for automated dubbing evaluation.
                     <!-- <div class="info">
                         <div>
                             <a href="https://arxiv.org" class="button icon" style="background-color: rgba(255, 255, 255, 0.3)"> Paper <i class="far fa-book-open"></i></a> &nbsp;&nbsp; 
@@ -80,7 +80,7 @@ Quality assessment of AI-generated dubbed content is a complex and challenging p
                 </div>
                
                 <div class="info">
-                    <p>Submitted at AAAI 2026</p>
+                    <p>Anonymous Submission</p>
                 </div>
             </div>
 
